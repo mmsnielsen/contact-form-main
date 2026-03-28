@@ -26,17 +26,60 @@
     </style>
   </head>
   <body>
-    Contact Us First Name This field is required Last Name This field is
-    required Email Address Please enter a valid email address This field is
-    required Query Type General Enquiry Support Request Please select a query
-    type Message This field is required I consent to being contacted by the team
-    To submit this form, please consent to being contacted Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+    <div class="container">
+      <header>Contact Us</header>
+
+      <form action="#" method="get" class="contact-form">
+        <label for="first-name">First Name*</label>
+        <input type="text" id="first-name" name="first-name" required />
+
+        <label for="last-name">Last Name*</label>
+        <input type="text" id="last-name" name="last-name" required />
+        <br />
+        <label for="email">Email Address*</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+        <label for="query-type">Query Type*</label>
+        <div class="radio-group">
+          <input
+            type="radio"
+            id="general"
+            name="query-type"
+            value="general"
+            required
+          />
+          <label for="general">General Enquiry</label>
+          <input
+            type="radio"
+            id="support"
+            name="query-type"
+            value="support"
+            required
+          />
+          <label for="support">Support Request</label>
+        </div>
+        <br />
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <br />
+        <input type="checkbox" id="consent" name="consent" required />
+        <label for="consent">I consent to being contacted by the team *</label>
+        <br />
+        <div class="submit-button">
+          <input type="submit" value="Submit!" />
+        </div>
+        To submit this form, please consent to being contacted Submit Message
+        Sent! Thanks for completing the form. We'll be in touch soon!
+      </form>
+    </div>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by
+      <a href="https://github.com/mmsnielsen/contact-form-main"
+        >pocketsizelasagne</a
+      >.
     </div>
   </body>
   <script src="src/index.js"></script>
