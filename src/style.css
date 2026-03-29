@@ -20,6 +20,11 @@ header {
   margin-bottom: 20px;
 }
 
+span {
+  color: hsl(169, 82%, 27%);
+  margin-left: 4px;
+}
+
 .contact-form {
   color: hsl(187, 24%, 22%);
   font-family: karla, sans-serif;
