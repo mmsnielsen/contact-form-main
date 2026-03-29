@@ -8,6 +8,91 @@ html {
   margin-top: 80px;
   margin-right: auto;
   margin-left: auto;
-  padding: 30px;
-  width: 45%;
+  padding: 25px;
+  width: 47%;
+}
+
+header {
+  font-family: karla, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(187, 24%, 22%);
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  color: hsl(187, 24%, 22%);
+  font-family: karla, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.name-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.name-row,
+.user-details {
+  flex: 1;
+}
+
+.user-details label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.user-details input {
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+}
+
+.user-details input:focus {
+  outline: none;
+  border-color: hsl(169, 82%, 27%);
+}
+
+input[type="email"] {
+  margin-bottom: 20px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.radio-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.radio-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(187, 24%, 22%);
+}
+
+.radio-option input {
+  margin-right: 10px;
+  width: auto;
+}
+
+.query-type {
+  display: block;
+}
+
+.radio-option:has(input:checked) {
+  background-color: hsl(148, 38%, 91%);
+  color: hsl(169, 82%, 27%);
 }

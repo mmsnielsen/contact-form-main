@@ -11,6 +11,12 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Frontend Mentor | Contact form</title>
 
@@ -30,35 +36,47 @@
       <header>Contact Us</header>
 
       <form action="#" method="get" class="contact-form">
-        <label for="first-name">First Name*</label>
-        <input type="text" id="first-name" name="first-name" required />
-
-        <label for="last-name">Last Name*</label>
-        <input type="text" id="last-name" name="last-name" required />
-        <br />
-        <label for="email">Email Address*</label>
-        <input type="email" id="email" name="email" required />
-        <br />
-        <label for="query-type">Query Type*</label>
-        <div class="radio-group">
-          <input
-            type="radio"
-            id="general"
-            name="query-type"
-            value="general"
-            required
-          />
-          <label for="general">General Enquiry</label>
-          <input
-            type="radio"
-            id="support"
-            name="query-type"
-            value="support"
-            required
-          />
-          <label for="support">Support Request</label>
+        <div class="name-row">
+          <div class="user-details">
+            <label for="first-name" class="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required />
+          </div>
+          <div class="user-details">
+            <label for="last-name" class="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" required />
+          </div>
         </div>
-        <br />
+
+        <div class="user-details">
+          <label for="email" class="email">Email Address *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <label class="query-type">Query Type *</label>
+        <div class="radio-group">
+          <div class="radio-option">
+            <input
+              type="radio"
+              id="general"
+              name="query-type"
+              value="general"
+              required
+            />
+            <label for="general">General Enquiry</label>
+          </div>
+
+          <div class="radio-option">
+            <input
+              type="radio"
+              id="support"
+              name="query-type"
+              value="support"
+              required
+            />
+            <label for="support">Support Request</label>
+          </div>
+        </div>
+
         <label for="message">Message*</label>
         <textarea id="message" name="message" rows="5" required></textarea>
         <br />
