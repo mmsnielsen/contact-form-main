@@ -5,24 +5,19 @@ html {
 .container {
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
-  margin-top: 80px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 80px auto 20px;
+  max-width: 500px;
   padding: 25px;
-  width: 47%;
+  width: 90%;
 }
 
-header {
+h1 {
+  color: hsl(187, 24%, 22%);
   font-family: karla, sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: hsl(187, 24%, 22%);
+  margin-top: 8px;
   margin-bottom: 20px;
-}
-
-span {
-  color: hsl(169, 82%, 27%);
-  margin-left: 4px;
 }
 
 .contact-form {
@@ -30,12 +25,17 @@ span {
   font-family: karla, sans-serif;
   font-size: 10px;
   font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
+span.required {
+  color: hsl(169, 82%, 27%);
+  margin-left: 4px;
+}
 .name-row {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .name-row,
@@ -43,43 +43,52 @@ span {
   flex: 1;
 }
 
-.user-details label {
+.user-details label,
+.query-type {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
-.user-details input {
+.user-details input,
+.user-details textarea {
+  cursor: pointer;
   border: 1px solid hsl(186, 15%, 59%);
   border-radius: 5px;
   box-sizing: border-box;
-  padding: 10px;
+  font-family: inherit;
+  padding: 8px 10px;
+  transition: all 0.2s ease-in-out;
   width: 100%;
 }
 
-.user-details input:focus {
+.user-details input:focus,
+.user-details textarea:focus,
+.user-details input:not(:placeholder-shown),
+.user-details textarea:not(:placeholder-shown) {
   outline: none;
   border-color: hsl(169, 82%, 27%);
 }
 
 input[type="email"] {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .radio-group {
   display: flex;
   gap: 10px;
-  margin-top: 8px;
-  margin-bottom: 20px;
+  margin-top: 6px;
+  margin-bottom: 18px;
 }
 
 .radio-option {
-  flex: 1;
-  display: flex;
   align-items: center;
-  padding: 12px;
+  cursor: pointer;
+  display: flex;
   border: 1px solid hsl(186, 15%, 59%);
   border-radius: 5px;
-  cursor: pointer;
+  flex: 1;
+  padding: 8px 10px;
+  transition: all 0.2s ease-in-out;
 }
 
 .radio-group label {
@@ -89,15 +98,80 @@ input[type="email"] {
 }
 
 .radio-option input {
+  color: hsl(187, 24%, 22%);
   margin-right: 10px;
   width: auto;
 }
 
-.query-type {
-  display: block;
-}
-
 .radio-option:has(input:checked) {
   background-color: hsl(148, 38%, 91%);
-  color: hsl(169, 82%, 27%);
+  border-color: hsl(169, 82%, 27%);
+  accent-color: hsl(169, 82%, 27%);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.consent-group {
+  align-items: center;
+  display: flex;
+  font-size: 10px;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.consent-group input[type="checkbox"] {
+  appearance: none;
+  border: 1px solid hsl(186, 15%, 59%);
+  cursor: pointer;
+  display: grid;
+  flex-shrink: 0;
+  height: 12px;
+  place-content: center;
+  -webkit-appearance: none;
+  width: 12px;
+}
+
+.consent-group input[type="checkbox"]:checked {
+  background-color: hsl(169, 82%, 27%);
+  border-color: hsl(169, 82%, 27%);
+}
+
+.consent-group input[type="checkbox"]:checked::after {
+  color: white;
+  content: "✔";
+  font-size: 8px;
+}
+
+.consent-group label {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.submit-button input[type="submit"] {
+  color: hsl(148, 38%, 91%);
+  cursor: pointer;
+  background-color: hsl(169, 82%, 27%);
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 12px 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submit-button input[type="submit"]:hover {
+  background-color: hsl(167, 96%, 11%);
+}
+
+@media (max-width: 768px) {
+  .name-row,
+  .radio-group {
+    flex-direction: column;
+  }
+  .user-details textarea {
+    height: 200px;
+  }
 }
