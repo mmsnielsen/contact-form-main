@@ -1,3 +1,14 @@
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+*/
+
 html {
   background-color: hsl(148, 38%, 91%);
 }
@@ -164,6 +175,24 @@ textarea {
 
 .submit-button input[type="submit"]:hover {
   background-color: hsl(167, 96%, 11%);
+}
+
+.error-text {
+  color: hsl(0, 66%, 54%);
+  display: none;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.user-details.error input,
+.user-details.error textarea,
+.radio-group.error .radio-option {
+  border-color: hsl(0, 66%, 54%);
+}
+
+.user-details.error .error-text,
+.radio-group.error + .error-text {
+  display: block;
 }
 
 @media (max-width: 768px) {

@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -20,15 +19,6 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>Frontend Mentor | Contact form</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
     </style>
   </head>
   <body>
@@ -48,6 +38,7 @@
               placeholder=" "
               required
             />
+            <span class="error-text">This field is required</span>
           </div>
           <div class="user-details">
             <label for="last-name" class="last-name"
@@ -60,6 +51,7 @@
               placeholder=" "
               required
             />
+            <span class="error-text">This field is required</span>
           </div>
         </div>
 
@@ -74,6 +66,7 @@
             placeholder=" "
             required
           />
+          <span class="error-text">Please enter a valid email address</span>
         </div>
 
         <label class="query-type"
@@ -101,6 +94,7 @@
             <label for="support">Support Request</label>
           </div>
         </div>
+        <span class="error-text">Please select a query type</span>
 
         <div class="user-details">
           <label for="message">Message <span class="required">*</span></label>
@@ -110,6 +104,7 @@
             rows="3"
             placeholder=" "
           ></textarea>
+          <span class="error-text">This field is required</span>
         </div>
 
         <div class="consent-group">
@@ -118,6 +113,7 @@
             >I consent to being contacted by the team
             <span class="required">*</span></label
           >
+          <span class="error-text">To submit this form, please consent to being contacted</span>
         </div>
 
         <div class="submit-button">
