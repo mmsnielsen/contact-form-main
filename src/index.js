@@ -1,9 +1,14 @@
 const form = document.querySelector(".contact-form");
-const successMessage = document.getElementById("success-message");
+const sentPopup = document.getElementById("sent-popup");
+
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/);
+};
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
   let isValid = true;
 
   const userDetails = document.querySelectorAll(".user-details");
@@ -16,6 +21,15 @@ form.addEventListener("submit", (e) => {
       detail.classList.remove("error");
     }
   });
+
+  const emailInput = document.getElementById("email");
+  const emailDetail = emailInput.closest(".user-details");
+  if (!validateEmail(emailInput.value)) {
+    emailDetail.classList.add("error");
+    isValid = false;
+  } else {
+    emailDetail.classList.remove("error");
+  }
 
   const radioGroup = document.querySelector(".radio-group");
   const radios = document.getElementsByName("query-type");
@@ -38,8 +52,6 @@ form.addEventListener("submit", (e) => {
   } else {
     consentGroup.classList.remove("error");
   }
-
-  //const successMessage = document.getElementById("success-message");//
 
   if (isValid) {
     const sentPopup = document.getElementById("sent-popup");
