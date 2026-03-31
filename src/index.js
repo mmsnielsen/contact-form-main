@@ -10,11 +10,11 @@ const validateEmail = (email) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let isValid = true;
+  let firstInvaildElement = null;
 
   const userDetails = document.querySelectorAll(".user-details");
   userDetails.forEach((detail) => {
     const input = detail.querySelector("input, textarea");
-
     const emailField = input.id === "email";
     const isEmpty = !input.value.trim();
     const isInvalidEmail = emailField && !validateEmail(input.value);
@@ -22,6 +22,7 @@ form.addEventListener("submit", (e) => {
     if (isEmpty || isInvalidEmail) {
       detail.classList.add("error");
       isValid = false;
+      if (!firstInvaildElement) firstInvaildElement = input;
     } else {
       detail.classList.remove("error");
     }
@@ -49,7 +50,11 @@ form.addEventListener("submit", (e) => {
     consentGroup.classList.remove("error");
   }
 
-  if (isValid) {
+  if (!isValid) {
+    if (firstInvaildElement) {
+      firstInvaildElement.focus();
+    }
+  } else {
     sentPopup.classList.add("show");
     form.reset();
     window.scrollTo({ top: 0, behavior: "smooth" });
