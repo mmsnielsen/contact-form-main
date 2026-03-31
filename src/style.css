@@ -8,6 +8,16 @@
         color: hsl(228, 45%, 44%);
       }
 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
 
 html {
   background-color: hsl(148, 38%, 91%);
@@ -16,6 +26,7 @@ html {
 .container {
   background-color: hsl(0, 0%, 100%);
   border-radius: 10px;
+  box-sizing: border-box;
   margin: 80px auto 20px;
   max-width: 500px;
   padding: 25px;
@@ -103,7 +114,7 @@ input[type="email"] {
 }
 
 .radio-group label {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   color: hsl(187, 24%, 22%);
 }
@@ -153,7 +164,7 @@ textarea {
 .consent-group input[type="checkbox"]:checked::after {
   color: white;
   content: "✔";
-  font-size: 8px;
+  font-size: 0.5rem;
 }
 
 .consent-group label {
@@ -168,14 +179,14 @@ textarea {
   border: none;
   border-radius: 5px;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 12px 20px;
   transition: background-color 0.3s ease;
   width: 100%;
 }
 
 .submit-button input[type="submit"]:hover {
-  background-color: hsl(167, 96%, 11%);
+  background-color: hsl(187, 24%, 22%);
 }
 
 .user-details input,
@@ -188,7 +199,7 @@ input[type="email"],
 .error-text {
   color: hsl(0, 66%, 54%);
   display: none;
-  font-size: 10px;
+  font-size: 0.6rem;
   margin-top: 4px;
   margin-bottom: 14px;
 }
@@ -235,7 +246,7 @@ input[type="email"],
   border-radius: 5px;
   color: hsl(0, 0%, 100%);
   font-family: karla, sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 15px;
   position: fixed;
   top: 20px;
@@ -256,14 +267,25 @@ input[type="email"],
 }
 
 .message-header h2 {
-  font-size: 16px;
+  font-size: 0.75rem;
   margin: 0;
 }
 
 .message-content p {
-  font-size: 10px;
+  font-size: 0.5rem;
   margin: 0;
   color: hsl(186, 15%, 59%);
+}
+
+@keyframes slideIn {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
