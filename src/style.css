@@ -229,6 +229,43 @@ input[type="email"],
   margin-bottom: 4px;
 }
 
+.sent-popup {
+  display: none;
+  background-color: hsl(187, 24%, 22%);
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  font-family: karla, sans-serif;
+  font-size: 12px;
+  padding: 15px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.success-popup.show {
+  animation: slideIn 0.5s ease-out;
+  display: block;
+}
+
+.success-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.success-header h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.success-content p {
+  font-size: 10px;
+  margin: 0;
+  color: hsl(186, 15%, 59%);
+}
+
 @media (max-width: 768px) {
   .name-row,
   .radio-group {
