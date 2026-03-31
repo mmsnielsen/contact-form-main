@@ -43,15 +43,15 @@ span.required {
   color: hsl(169, 82%, 27%);
   margin-left: 4px;
 }
-.name-row {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 18px;
-}
 
 .name-row,
 .user-details {
   flex: 1;
+}
+.name-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
 }
 
 .user-details label,
@@ -81,14 +81,14 @@ span.required {
 }
 
 input[type="email"] {
-  margin-bottom: 18px;
+  margin-bottom: 4px;
 }
 
 .radio-group {
   display: flex;
   gap: 10px;
   margin-top: 6px;
-  margin-bottom: 18px;
+  margin-bottom: 4px;
 }
 
 .radio-option {
@@ -127,6 +127,7 @@ textarea {
 .consent-group {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   font-size: 10px;
   gap: 10px;
   margin: 20px 0;
@@ -177,11 +178,30 @@ textarea {
   background-color: hsl(167, 96%, 11%);
 }
 
+.user-details input,
+.user-details textarea,
+input[type="email"],
+.radio-group {
+  margin-bottom: 0px;
+}
+
 .error-text {
   color: hsl(0, 66%, 54%);
   display: none;
   font-size: 10px;
   margin-top: 4px;
+  margin-bottom: 14px;
+}
+
+.user-details.error .error-text,
+.radio-group.error + .error-text,
+.consent-group.error .error-text {
+  display: block;
+}
+.consent-group .error-text {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  width: 100%;
 }
 
 .user-details.error input,
@@ -190,17 +210,44 @@ textarea {
   border-color: hsl(0, 66%, 54%);
 }
 
-.user-details.error .error-text,
-.radio-group.error + .error-text {
-  display: block;
+.user-details.error,
+.radio-group.error {
+  margin-bottom: 4px;
+}
+
+.user-details:not(.error),
+.radio-group:not(.error),
+.name-row:not(.error) {
+  margin-bottom: 18px;
+}
+
+.name-row > .user-details {
+  margin-bottom: 0 !important;
+}
+
+.name-row:has(.error) {
+  margin-bottom: 4px;
 }
 
 @media (max-width: 768px) {
   .name-row,
   .radio-group {
     flex-direction: column;
+    margin-bottom: 18px !important;
+  }
+  .name-row .user-details:first-child:not(.error) {
+    margin-bottom: 8px !important;
+  }
+  .name-row .user-details:first-child.error {
+    margin-bottom: 4px !important;
+  }
+  .name-row .user-details:last-child {
+    margin-bottom: 0px !important;
   }
   .user-details textarea {
     height: 200px;
+  }
+  .name-row .user-details.error .error-text {
+    margin-bottom: 0px;
   }
 }

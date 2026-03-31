@@ -43,15 +43,14 @@ form.addEventListener("submit", (e) => {
     successMessage.classList.add("show");
     form.reset();
     window.scrollTo({ top: 0, behavior: "smooth" });
-    setTimeout(() => {
-      successMessage.classList.remove("show");
-    }, 5000);
   }
 
   form.querySelectorAll("input, textarea").forEach((input) => {
     input.addEventListener("input", () => {
-      input.parentElement.classList.remove("error");
-      if (input.type === "radio") radioGroup.classList.remove("error");
+      const parent = input.closest(
+        ".user-details, .radio-group, .consent-group",
+      );
+      if (parent) parent.classList.remove("error");
     });
   });
 });
