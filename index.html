@@ -10,12 +10,10 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&family=Young+Serif&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="src/style.css" />
     <title>Frontend Mentor | Contact form</title>
 
@@ -24,8 +22,8 @@
   <body>
     <div class="container">
       <h1>Contact Us</h1>
-
       <form action="#" method="get" class="contact-form" novalidate>
+
         <div class="name-row">
           <div class="user-details">
             <label for="first-name" class="first-name"
@@ -120,20 +118,21 @@
           <input type="submit" value="Submit" />
         </div>
 
-        <div id="sent-popup" class="sent-popup">
-          <div class="message-content">
-            <div class="message-header">
-            <img
-              src="./assets/images/icon-success-check.svg"
-              alt="Success Icon"
-              class="success-icon"
-            />
-            <h2>Message Sent!</h2>
-            </div>
-          <p>Thanks for completing the form. We'll be in touch soon!</p>
-          </div>
-        </div>
       </form>
+
+      <div id="sent-popup" class="sent-popup">
+        <div class="message-content">
+          <div class="message-header">
+          <img
+            src="./assets/images/icon-success-check.svg"
+            alt="Success Icon"
+            class="success-icon"
+          />
+          <h2>Message Sent!</h2>
+          </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+      </div>
     </div>
 
     <script src="src/index.js"></script>
