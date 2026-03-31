@@ -83,6 +83,11 @@ span.required {
   width: 100%;
 }
 
+.user-details input:hover,
+.user-details textarea:hover {
+  border-color: hsl(169, 82%, 27%);
+}
+
 .user-details input:focus,
 .user-details textarea:focus,
 .user-details input:not(:placeholder-shown),
@@ -125,10 +130,52 @@ input[type="email"] {
   width: auto;
 }
 
+.radio-option input[type="radio"] {
+  appearance: none;
+  -webkit-appearence: none;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  height: 14px;
+  margin-right: 10px;
+  place-content: center;
+  width: 14px;
+}
+
+.radio-option:hover,
+.radio-option:focus-within {
+  background-color: hsl(148, 38%, 91%);
+  border-color: hsl(169, 82%, 27%);
+}
+
+.radio-option:hover input[type="radio"],
+.radio-option input[type="radio"]:focus {
+  border-color: hsl(169, 82%, 27%);
+  outline: none;
+}
+
+.radio-option input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: hsl(169, 82%, 27%);
+}
+
+.radio-option input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
 .radio-option:has(input:checked) {
   background-color: hsl(148, 38%, 91%);
   border-color: hsl(169, 82%, 27%);
-  accent-color: hsl(169, 82%, 27%);
+}
+
+.radio-option input[type="radio"]:checked {
+  border-color: hsl(169, 82%, 27%);
 }
 
 textarea {
@@ -162,7 +209,7 @@ textarea {
 }
 
 .consent-group input[type="checkbox"]:checked::after {
-  color: white;
+  color: hsl(148, 38%, 91%);
   content: "✔";
   font-size: 0.5rem;
 }
