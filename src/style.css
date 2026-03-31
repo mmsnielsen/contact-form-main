@@ -243,24 +243,24 @@ input[type="email"],
   transform: translateX(-50%);
 }
 
-.success-popup.show {
+.sent-popup.show {
   animation: slideIn 0.5s ease-out;
-  display: block;
+  display: block !important;
 }
 
-.success-header {
+.message-header {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
 
-.success-header h2 {
+.message-header h2 {
   font-size: 16px;
   margin: 0;
 }
 
-.success-content p {
+.message-content p {
   font-size: 10px;
   margin: 0;
   color: hsl(186, 15%, 59%);

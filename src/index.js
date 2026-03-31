@@ -39,10 +39,17 @@ form.addEventListener("submit", (e) => {
     consentGroup.classList.remove("error");
   }
 
+  //const successMessage = document.getElementById("success-message");//
+
   if (isValid) {
-    successMessage.classList.add("show");
+    const sentPopup = document.getElementById("sent-popup");
+    sentPopup.classList.add("show");
     form.reset();
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    setTimeout(() => {
+      sentPopup.classList.remove("show");
+    }, 3000);
   }
 
   form.querySelectorAll("input, textarea").forEach((input) => {
