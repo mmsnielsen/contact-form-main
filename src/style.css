@@ -143,16 +143,17 @@ input[type="email"] {
   width: 14px;
 }
 
-.radio-option:hover,
-.radio-option:focus-within {
-  background-color: hsl(148, 38%, 91%);
-  border-color: hsl(169, 82%, 27%);
-}
-
-.radio-option:hover input[type="radio"],
-.radio-option input[type="radio"]:focus {
-  border-color: hsl(169, 82%, 27%);
-  outline: none;
+@media (hover: hover) {
+  .radio-option:hover,
+  .radio-option:focus-within {
+    background-color: hsl(148, 38%, 91%);
+    border-color: hsl(169, 82%, 27%);
+  }
+  .radio-option:hover input[type="radio"],
+  .radio-option input[type="radio"]:focus {
+    border-color: hsl(169, 82%, 27%);
+    outline: none;
+  }
 }
 
 .radio-option input[type="radio"]::before {
