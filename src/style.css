@@ -142,18 +142,18 @@ input[type="email"] {
   place-content: center;
   width: 14px;
 }
-
-.radio-option:hover,
-.radio-option:focus-within {
-  background-color: hsl(148, 38%, 91%);
-  border-color: hsl(169, 82%, 27%);
+@media (hover: hover) {
+  .radio-option:hover,
+  .radio-option:focus-within {
+    background-color: hsl(148, 38%, 91%);
+    border-color: hsl(169, 82%, 27%);
+  }
+  .radio-option:hover input[type="radio"],
+  .radio-option input[type="radio"]:focus {
+    border-color: hsl(169, 82%, 27%);
+    outline: none;
+  }
 }
-.radio-option:hover input[type="radio"],
-.radio-option input[type="radio"]:focus {
-  border-color: hsl(169, 82%, 27%);
-  outline: none;
-}
-
 .radio-option input[type="radio"]::before {
   content: "";
   width: 10px;
@@ -354,15 +354,5 @@ input[type="email"],
   }
   .name-row .user-details.error .error-text {
     margin-bottom: 0px;
-  }
-  @media (hover: hover) {
-    .radio-option:hover {
-      background-color: hsl(148, 38%, 91%);
-      border-color: hsl(169, 82%, 27%);
-    }
-    .radio-option:hover input[type="radio"] {
-      border-color: hsl(169, 82%, 27%);
-      outline: none;
-    }
   }
 }
