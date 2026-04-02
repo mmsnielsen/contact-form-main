@@ -208,7 +208,7 @@ textarea {
   white-space: nowrap;
 }
 
-.submit-button input[type="submit"] {
+.submit-button button[type="submit"] {
   color: hsl(148, 38%, 91%);
   cursor: pointer;
   background-color: hsl(169, 82%, 27%);
@@ -221,7 +221,7 @@ textarea {
   width: 100%;
 }
 
-.submit-button input[type="submit"]:hover {
+.submit-button button:hover {
   background-color: hsl(187, 24%, 22%);
 }
 
